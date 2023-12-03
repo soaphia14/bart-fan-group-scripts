@@ -1,3 +1,4 @@
+# CHANGES PASSWORD FOR ALL SYSTEMS (NOT JUST USERS)
 echo "BEGIN"
 #!/bin/bash
 users=$(awk -F: '{ print $1}' /etc/passwd)
