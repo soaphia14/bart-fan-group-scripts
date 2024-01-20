@@ -30,7 +30,7 @@ for user in "${AUTHORIZED_USERS_ARRAY[@]}"; do
   fi
 done
 echo ""
-apfile -t CURRENT_ADMINS < <(getent group sudo | awk -F: '{print $4}')
+mapfile -t CURRENT_ADMINS < <(getent group sudo | awk -F: '{print $4}')
 IFS="," read -r -a CURR_ADMINS_ARRAY <<< "$CURRENT_ADMINS"
 IFS='/' read -r -a ADMINS_ARRAY <<< "$ADMINS"
 
